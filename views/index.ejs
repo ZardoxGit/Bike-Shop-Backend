@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/9a6e5a9205.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/stylesheets/style.css">
+    </head>
+    <body>
+
+        <header>
+            <nav class="navbar">
+                <div class="brand-title">BIKE<img class="logo" src="images/bike-logo.svg" height="80px">SHOP</div>
+            
+            <i class="fas fa-bars"></i>
+                <div class="nav-links">
+                    <ul>
+                        <li class="home"><a class="nav-link" href="#">Accueil</a></li>
+                        <li class="about"><a class="nav-link" href="#">A propos</a></li>
+                        <li class="cart"><a class="nav-link" href="/shop">Panier</a></li>
+                    </ul>  
+                </div>
+            </nav>
+        </header>
+        
+
+        <div class="background-image"></div>
+
+        <div class="bikes-card">
+            <%
+            for(var i=0; i<dataBike.length; i++) {
+            %>
+            
+            <div class="bike">
+                    <img src=<%= dataBike[i].url%> alt="bike">
+                <div class="card-info">
+                    <h3 class="name"><%= dataBike[i].name%></h3>
+                    <%=dataBike[i].price%> €
+                    <div>
+                        <button><a class="button-buy" href="/shop">BUY</a></button>
+                    </div>
+                </div>
+            </div>
+            <%
+            }
+            %>
+
+        </div>
+        
+        <script src="/javascripts/script.js"></script>
+        
+    </body>
+</html>

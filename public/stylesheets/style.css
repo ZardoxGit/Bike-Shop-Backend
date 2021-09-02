@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    
+}
+
+.background-image {
+    background: url(/images/bike-background.jpg);
+    width: 100%;
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(0, 0%, 75%);
+    color: white;
+}
+
+.logo {
+    margin-bottom: -20px;
+    cursor: pointer;
+}
+
+.brand-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+    text-shadow: 1px 1px 1px black;
+    cursor: pointer;
+    transition: 0.3s ease 0s;
+}
+
+.nav-links ul {
+    display: flex;
+    
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    text-shadow: 1px 1px 1px black;
+    font-size: 1.2rem;
+    transition: all 0.3s ease 0s;
+    display: block;
+}
+
+.nav-links a:hover {
+    background-color: hsl(188, 78%, 41%, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    
+}
+
+.fa-bars {
+    position: absolute;
+    right: 0.5rem;
+    font-size: 3rem;
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .fa-bars {
+        display: flex;
+        margin: 1.3rem;
+        
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        text-align: center;
+    }
+}
+
+
+/* PRODUCTS*/
+
+.bikes-card {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    text-align: center;
+    gap: 100px;
+    
+}
+
+.bikes-card img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+    
+}
+
+.bikes-card img:hover {
+    transform: scale(1.2);
+    transition: 0.7s ease 0s;
+}
+
+@media (min-width: 650px) {
+    .bikes-card {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1000px) {
+    .bikes-card {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+button {
+    border: 3px solid hsl(188, 78%, 41%);
+    background: none;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+
+.button-buy {
+    display: flex;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    color:hsl(188, 78%, 41%);
+    text-shadow: 0.5px 0.5px 0.5px black;
+    
+}
+
+button a:hover {
+    background-color: hsl(188, 78%, 41%);
+    transition: 0.35s ease 0s;
+    border-radius: 15px;
+    color: white;
+    transition: 0.35s ease 0s;
+}
+
+/*CART*/
+
+.cart-grid  {
+    text-align: center;
+    margin: 30px;
+    width: 100%;
+    
+}
+
+.cart-head {
+    background-color: hsl(0, 0%, 75%);
+}
+
+.cart-img {
+   width: 150px;
+   background-color: hsl(0, 0%, 75%);
+}
+
+.cart-img:hover {
+transform: scale(1.06);
+transition: 0.7s ease 0s;
+}
+
+.input-cart {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+}
+
+.button-quantity {
+    margin-left: 10px;
+    height: 40px;
+    width: 40px;
+    
+}
+
+.button-suppr {
+    height: 40px;
+    width: 40px;
+}
+
+.total {
+    margin: 30px;
+    text-align: right;
+}
+
+@media (max-width: 850px) {
+    .cart-grid {
+        padding-left: 30px;
+        padding-right: 30px;;
+    }
+}
+
+@media (max-width: 650px) {
+    .cart-img {
+        width: 100px;
+    }
+}
+
